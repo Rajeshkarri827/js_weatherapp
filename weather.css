@@ -1,3 +1,4 @@
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
@@ -22,6 +23,7 @@ body {
     100% { background-position: 0% 50%; }
 }
 
+/* Container Styles */
 .container {
     background: rgba(255, 255, 255, 0.85);
     padding: 40px;
@@ -39,6 +41,7 @@ body {
     font-weight: 700;
 }
 
+/* Input Styles */
 input[type="text"] {
     width: 100%;
     padding: 15px;
@@ -55,6 +58,7 @@ input[type="text"]:focus {
     box-shadow: 0 4px 10px rgba(255, 105, 97, 0.5);
 }
 
+/* Button Styles */
 button {
     width: 100%;
     padding: 15px;
@@ -75,6 +79,7 @@ button:hover {
     box-shadow: 0 6px 12px rgba(255, 105, 97, 0.6);
 }
 
+/* Weather Info Section */
 #weather-info {
     background: #fffcf9;
     padding: 20px;
@@ -93,4 +98,115 @@ button:hover {
     font-size: 18px;
     color: #555;
     margin: 5px 0;
+}
+
+/* Media Queries */
+
+/* For Small Screens (max-width: 600px) */
+@media (max-width: 600px) {
+    body {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    #title {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    input[type="text"] {
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    #weather-info h1 {
+        font-size: 22px;
+    }
+
+    #weather-info p {
+        font-size: 16px;
+    }
+}
+
+/* For Medium Screens (600px to 1024px) */
+@media (min-width: 600px) and (max-width: 1024px) {
+    body {
+        flex-direction: column;
+    }
+
+    .container {
+        width: 80%;
+        padding: 30px;
+        border-radius: 12px;
+    }
+
+    #title {
+        font-size: 28px;
+    }
+
+    input[type="text"] {
+        font-size: 16px;
+        padding: 14px;
+    }
+
+    button {
+        font-size: 18px;
+        padding: 14px;
+    }
+
+    #weather-info h1 {
+        font-size: 24px;
+    }
+
+    #weather-info p {
+        font-size: 18px;
+    }
+}
+
+/* For Large Screens (1024px and above) */
+@media (min-width: 1024px) {
+    body {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        width: 400px;
+        padding: 40px;
+        border-radius: 15px;
+    }
+
+    #title {
+        font-size: 32px;
+    }
+
+    input[type="text"] {
+        font-size: 18px;
+        padding: 16px;
+    }
+
+    button {
+        font-size: 20px;
+        padding: 16px;
+    }
+
+    #weather-info h1 {
+        font-size: 28px;
+    }
+
+    #weather-info p {
+        font-size: 20px;
+    }
 }
